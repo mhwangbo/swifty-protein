@@ -9,7 +9,9 @@
 import UIKit
 
 class ProteinListViewController: UITableViewController {
-
+    
+    var proteinList: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,29 +20,36 @@ class ProteinListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let path = Bundle.main.path(forResource: "ligands", ofType: "txt") {
+            do {
+                let data = try String(contentsOfFile: path, encoding: .utf8)
+                proteinList = data.components(separatedBy: .newlines)
+            } catch {
+                print(error)
+            }
+        }
+        
+        tableView?.register(ProteinListViewCell.nib, forCellReuseIdentifier: ProteinListViewCell.identifier)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return proteinList.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        if let cell = tableView.dequeueReusableCell(withIdentifier: ProteinListViewCell.identifier, for: indexPath) as? ProteinListViewCell {
+            
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
