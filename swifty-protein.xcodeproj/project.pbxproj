@@ -15,8 +15,8 @@
 		20C72C1221EE9FF3006CEFC7 /* swifty_proteinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C72C1121EE9FF3006CEFC7 /* swifty_proteinTests.swift */; };
 		20C72C1D21EE9FF3006CEFC7 /* swifty_proteinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C72C1C21EE9FF3006CEFC7 /* swifty_proteinUITests.swift */; };
 		5875122221EEB041005417CA /* ProteinListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122021EEB040005417CA /* ProteinListViewCell.swift */; };
-		5875122321EEB041005417CA /* ProteinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122121EEB040005417CA /* ProteinListViewController.swift */; };
 		5875122521EEB08A005417CA /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5875122421EEB08A005417CA /* ligands.txt */; };
+		5875122721EEC6E8005417CA /* ProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122621EEC6E8005417CA /* ProteinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		20C72C1C21EE9FF3006CEFC7 /* swifty_proteinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifty_proteinUITests.swift; sourceTree = "<group>"; };
 		20C72C1E21EE9FF3006CEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5875122021EEB040005417CA /* ProteinListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProteinListViewCell.swift; sourceTree = "<group>"; };
-		5875122121EEB040005417CA /* ProteinListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProteinListViewController.swift; sourceTree = "<group>"; };
 		5875122421EEB08A005417CA /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
+		5875122621EEC6E8005417CA /* ProteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +105,13 @@
 			children = (
 				5875122421EEB08A005417CA /* ligands.txt */,
 				5875122021EEB040005417CA /* ProteinListViewCell.swift */,
-				5875122121EEB040005417CA /* ProteinListViewController.swift */,
 				20C72BFC21EE9FF2006CEFC7 /* AppDelegate.swift */,
 				20C72BFE21EE9FF2006CEFC7 /* LoginViewController.swift */,
 				20C72C0021EE9FF2006CEFC7 /* Main.storyboard */,
 				20C72C0321EE9FF3006CEFC7 /* Assets.xcassets */,
 				20C72C0521EE9FF3006CEFC7 /* LaunchScreen.storyboard */,
 				20C72C0821EE9FF3006CEFC7 /* Info.plist */,
+				5875122621EEC6E8005417CA /* ProteinViewController.swift */,
 			);
 			path = "swifty-protein";
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			files = (
 				5875122221EEB041005417CA /* ProteinListViewCell.swift in Sources */,
 				20C72BFF21EE9FF2006CEFC7 /* LoginViewController.swift in Sources */,
-				5875122321EEB041005417CA /* ProteinListViewController.swift in Sources */,
+				5875122721EEC6E8005417CA /* ProteinViewController.swift in Sources */,
 				20C72BFD21EE9FF2006CEFC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
