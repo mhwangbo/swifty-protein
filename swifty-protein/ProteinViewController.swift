@@ -11,7 +11,8 @@ import UIKit
 class ProteinViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UIView!
+    @IBOutlet weak var searchBar: SearchBar!
+    
     
     
     var protein: [String] = []

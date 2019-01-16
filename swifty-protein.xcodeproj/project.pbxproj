@@ -17,6 +17,7 @@
 		5875122221EEB041005417CA /* ProteinListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122021EEB040005417CA /* ProteinListViewCell.swift */; };
 		5875122521EEB08A005417CA /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5875122421EEB08A005417CA /* ligands.txt */; };
 		5875122721EEC6E8005417CA /* ProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122621EEC6E8005417CA /* ProteinViewController.swift */; };
+		5875122921EED4BD005417CA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122821EED4BD005417CA /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5875122021EEB040005417CA /* ProteinListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProteinListViewCell.swift; sourceTree = "<group>"; };
 		5875122421EEB08A005417CA /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
 		5875122621EEC6E8005417CA /* ProteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinViewController.swift; sourceTree = "<group>"; };
+		5875122821EED4BD005417CA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				20C72C0521EE9FF3006CEFC7 /* LaunchScreen.storyboard */,
 				20C72C0821EE9FF3006CEFC7 /* Info.plist */,
 				5875122621EEC6E8005417CA /* ProteinViewController.swift */,
+				5875122821EED4BD005417CA /* SearchBar.swift */,
 			);
 			path = "swifty-protein";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				5875122221EEB041005417CA /* ProteinListViewCell.swift in Sources */,
 				20C72BFF21EE9FF2006CEFC7 /* LoginViewController.swift in Sources */,
+				5875122921EED4BD005417CA /* SearchBar.swift in Sources */,
 				5875122721EEC6E8005417CA /* ProteinViewController.swift in Sources */,
 				20C72BFD21EE9FF2006CEFC7 /* AppDelegate.swift in Sources */,
 			);
