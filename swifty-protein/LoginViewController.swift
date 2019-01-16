@@ -11,29 +11,40 @@ import LocalAuthentication
 
 class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
+        @IBOutlet weak var TouchIDbutton: UIButton!
+        override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    @IBAction func TouchID(_ sender: Any) {
-        let context:LAContext = LAContext()
         
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "touch ID 줭!!", reply: { (success, error) in
-                if success {
-                    print("Touch ID success")
-                }
-                else {
+        let context:LAContext = LAContext()
+        var autherror:NSError?
+        
+        context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &autherror)
+        
+        if autherror != nil {
+            TouchIDbutton.isHidden = true
+        }
+        else {
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "touch ID 줭!!", reply: {(complete, error) -> Void in
+                if error != nil {
                     let alert = UIAlertController(title: "Touch ID Fail", message:
                         "Touch ID is not valid.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
+                else {
+                    //self.performSegue(withIdentifier: "SearchProtein", sender: self)
+                    print("Touch ID success")
+                }
             })
         }
-        else {
-            print("somethings wrong yo")
-        }
     }
+    
+/*    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SearchProtein" {
+            let new = segue.destination as! ProteinViewController
+            let destination = new
+            destination.json = self.json
+        }
+    }*/
 }
 
