@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        let navigationFont = UIFont(name: "menlo", size: 16)!
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationFont]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationFont], for: .normal)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barStyle = UIBarStyle.black
         // Override point for customization after application launch.
         return true
     }

@@ -9,7 +9,6 @@
 import UIKit
 
 class ProteinListViewCell: UITableViewCell {
-    @IBOutlet weak var proteinName: UILabel!
     
     static var nib:UINib {
         return UINib(nibName: identifier, bundle: nil)
