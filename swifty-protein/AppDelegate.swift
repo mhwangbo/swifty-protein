@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import RevealingSplashView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        //Custom Navigation Bar
         UINavigationBar.appearance().barTintColor = UIColor.black
         let navigationFont = UIFont(name: "menlo", size: 16)!
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationFont]
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationFont], for: .normal)
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationFont], for: .normal)
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barStyle = UIBarStyle.black
-        // Override point for customization after application launch.
         return true
     }
 
@@ -31,6 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        let vc = UIApplication.shared.keyWindow?.rootViewController
+        
+        if let nav = vc as? UINavigationController {
+            let str: String = String(describing: nav.visibleViewController)
+            
+            if str.contains("ProteinViewController") {
+                nav.popViewController(animated: true)
+            }
+            
+            if str.contains("DetailViewController") {
+                let first = nav.viewControllers[0]
+                nav.popToViewController(first, animated: true)
+        }
+    }
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }

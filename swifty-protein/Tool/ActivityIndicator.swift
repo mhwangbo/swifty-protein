@@ -19,6 +19,7 @@ class ActivityIndicator {
     let activityView = UIView()
     
     func animateActivity(title: String, view: UIView, navigationItem: UINavigationItem) {
+        
         guard navigationItem.titleView == nil else { return }
         
         activityIndicator.style = .white
@@ -41,8 +42,9 @@ class ActivityIndicator {
         navigationItem.titleView = activityView
         activityIndicator.startAnimating()
     }
+    
     func stopAnimating(navigationItem: UINavigationItem) {
-        activityIndicator.stopAnimating()
         navigationItem.titleView = nil
+        activityIndicator.stopAnimating()
     }
 }

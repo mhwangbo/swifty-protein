@@ -10,46 +10,33 @@ import UIKit
 import SceneKit
 
 class DetailViewController: UIViewController {
-    
-    
 
-
-    @IBOutlet weak var atomName: UILabel!
-    @IBOutlet weak var atomMass: UILabel!
-    @IBOutlet weak var atomBoil: UILabel!
-    @IBOutlet weak var atomNumber: UILabel!
     @IBOutlet weak var ProteinView: SCNView!
+    
     let activityIndicator = ActivityIndicator.shared
     var name : String?
     var pdb_file : String?
     var http: String = "https://files.rcsb.org/ligands/view/"
     var pdb: String = "_ideal.pdb"
-    var atom: Elements?
+    var atom: [Elements]?
+    let settingLaunch = SlideupInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = name
+        activityIndicator.animateActivity(title: "Loading...", view: self.view, navigationItem: navigationItem)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "menlo-Bold", size: 20)!]
         getproteinInfo(pName: name!)
         ProteinView.allowsCameraControl = true
         ProteinView.autoenablesDefaultLighting = true
-        sceneSetup()
+//        ProteinView.layer.borderWidth = 5
+//        ProteinView.layer.borderColor = UIColor.white.cgColor
         ProteinView.layer.cornerRadius = 10
-        atomName.layer.cornerRadius = 5
-        atomMass.layer.cornerRadius = 5
-        atomBoil.layer.cornerRadius = 5
-        atomNumber.layer.cornerRadius = 5
         ProteinView.layer.masksToBounds = true
-        atomName.layer.masksToBounds = true
-        atomMass.layer.masksToBounds = true
-        atomBoil.layer.masksToBounds = true
-        atomNumber.layer.masksToBounds = true
+        
+        sceneSetup()
+        
         atom = GetAtomInfo().getAtomInfo()
-        atomName.isHidden = true
-        atomMass.isHidden = true
-        atomBoil.isHidden = true
-        atomNumber.isHidden = true
+        
         //show atom information
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.didTap(_:)))
         self.view.addGestureRecognizer(tapGR)
@@ -57,15 +44,17 @@ class DetailViewController: UIViewController {
         //share button
         let addButton = UIBarButtonItem(title: "share", style: .plain, target: self, action: #selector(shareButton))
         self.navigationItem.rightBarButtonItem = addButton
-        activityIndicator.animateActivity(title: "Loading...", view: self.view, navigationItem: navigationItem)
 
         
     }
 
     func getproteinInfo(pName: String) {
+
         let url = URL(string: http + pName + pdb)
         let task = URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
             if error == nil {
+                DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating(navigationItem: self.navigationItem)
                 let urlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                 var lines:[String] = []
                 let string = urlContent! as String
@@ -73,56 +62,76 @@ class DetailViewController: UIViewController {
                     lines.append(line)
                 }
 
-                self.activityIndicator.stopAnimating(navigationItem: self.navigationItem)
+
                 self.ProteinView!.scene = ProteinSCN(pdb_file: lines)
+                self.activityIndicator.stopAnimating(navigationItem: self.navigationItem)
+                self.title = self.name
             }
+            }
+            
             else {
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating(navigationItem: self.navigationItem)
+                }
                 self.performSegue(withIdentifier: "warning", sender: self)
                 print("error")
+                
             }
         })
+
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         task.resume()
+
     }
     
     func sceneSetup() {
-        ProteinView.backgroundColor = UIColor.darkGray
+        ProteinView.backgroundColor = UIColor.gray
         ProteinView.autoenablesDefaultLighting = true
         ProteinView.allowsCameraControl = true
     }
+    
     @objc func didTap(_ tapGR: UITapGestureRecognizer) {
+
         let v = self.ProteinView as SCNView
         let tapPoint = tapGR.location(in: v)
         let hits = self.ProteinView!.hitTest(tapPoint, options: nil)
         
         if let tappedNode = hits.first?.node {
-            atomName.isHidden = false
+
             if tappedNode.name?.isEmpty != nil {
-                for atom in (self.atom?.elements)! {
-                    if (atom.symbol?.lowercased()) == tappedNode.name?.lowercased() {
-                        atomName.isHidden = false
-                        atomMass.isHidden = false
-                        atomBoil.isHidden = false
-                        atomNumber.isHidden = false
-                        atomName.text = "  Selected Element: " + tappedNode.name!
-                        atomMass.text = "  Atomic Mass: " + (atom.atomic_mass == nil ? "no info" : String(format: "%.3f", atom.atomic_mass!))
-                        atomBoil.text = "  Boiling Point: " + (atom.boil == nil ? "no info" : String(format: "%.3f", atom.boil!))
-                        atomNumber.text = "  Atomic Number: " + String(format: "%d", atom.number!)
+                for index in atom! {
+                    if index.symbol.lowercased() == tappedNode.name?.lowercased(){
+                        settingLaunch.getAtominfo(data: index)
+                        settingLaunch.handleView()
                     }
                 }
             }
             else {
-                atomName.isHidden = true
+                print("error")
             }
-
         }
     }
+    
     @objc func shareButton(_ sender: UINavigationItem) {
-            let image = ProteinView.snapshot()
-            let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        let image = ProteinView.snapshot()
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
             activityVC.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-            self.present(activityVC, animated: true, completion: nil)
+            activityVC.completionWithItemsHandler = { activity, success, items, error in
+            if success {
+                if activity == .saveToCameraRoll {
+                    self.showMessage()
+                }
+            }
         }
+        self.present(activityVC, animated: true, completion: nil)
+        }
+    
+    func showMessage() {
+        let alertController = UIAlertController(title: "Save to Cameraroll", message: "저장완료", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true, completion: nil)
     }
+}
 

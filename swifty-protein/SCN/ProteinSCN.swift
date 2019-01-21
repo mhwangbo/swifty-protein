@@ -14,7 +14,6 @@ class ProteinSCN: SCNScene, SCNNodeRendererDelegate {
     var camera: SCNNode!
     var atom: [SCNNode?] = []
     var pdb_file : [String]?
-    
     init(pdb_file: [String]) {
         super.init()
         //initCamera()

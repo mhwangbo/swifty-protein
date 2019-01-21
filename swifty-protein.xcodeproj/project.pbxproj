@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		200193D321EECFC200C8C577 /* ProteinSCN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200193D221EECFC200C8C577 /* ProteinSCN.swift */; };
 		200193D621EEE78B00C8C577 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200193D521EEE78B00C8C577 /* DetailViewController.swift */; };
-		2001975721F2FAF000322E56 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001975621F2FAF000322E56 /* CustomLoader.swift */; };
 		2001975D21F3117100322E56 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001975C21F3117100322E56 /* ActivityIndicator.swift */; };
 		2001975F21F31F9300322E56 /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001975E21F31F9300322E56 /* WarningViewController.swift */; };
-		2001976321F3288100322E56 /* warning.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2001976221F3288100322E56 /* warning.gif */; };
+		20078AC821F5965200DD4490 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 20078AC721F5965200DD4490 /* Launch.png */; };
 		200EC17C21F18A1700FF0D86 /* AtomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200EC17B21F18A1700FF0D86 /* AtomInfo.swift */; };
 		200EC17E21F18BF900FF0D86 /* PTJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 200EC17D21F18BF900FF0D86 /* PTJSON.json */; };
+		201F996F21F3FFC500F728A6 /* SlideupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201F996E21F3FFC500F728A6 /* SlideupInfo.swift */; };
+		201F997121F3FFD400F728A6 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201F997021F3FFD300F728A6 /* InfoCell.swift */; };
+		201F997E21F474D500F728A6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 201F997D21F474D500F728A6 /* data.json */; };
 		20C72BFD21EE9FF2006CEFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C72BFC21EE9FF2006CEFC7 /* AppDelegate.swift */; };
 		20C72BFF21EE9FF2006CEFC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C72BFE21EE9FF2006CEFC7 /* LoginViewController.swift */; };
 		20C72C0221EE9FF2006CEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C72C0021EE9FF2006CEFC7 /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 		5875122221EEB041005417CA /* ProteinListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122021EEB040005417CA /* ProteinListViewCell.swift */; };
 		5875122321EEB041005417CA /* ProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875122121EEB040005417CA /* ProteinViewController.swift */; };
 		5875122521EEB08A005417CA /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5875122421EEB08A005417CA /* ligands.txt */; };
+		C388D567BB6F7F3A39894D45 /* Pods_swifty_proteinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF512E1F2445EBA0852081C /* Pods_swifty_proteinUITests.framework */; };
+		F3712E3A54269BEE33D6E815 /* Pods_swifty_proteinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A778F9529D992389D40FB0AC /* Pods_swifty_proteinTests.framework */; };
+		FCF51CCE5DAD2482041EB07E /* Pods_swifty_protein.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C80CA317AC75B123AEFBBE /* Pods_swifty_protein.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18C80CA317AC75B123AEFBBE /* Pods_swifty_protein.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_protein.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		200193D221EECFC200C8C577 /* ProteinSCN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinSCN.swift; sourceTree = "<group>"; };
 		200193D521EEE78B00C8C577 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		2001975621F2FAF000322E56 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		2001975C21F3117100322E56 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2001975E21F31F9300322E56 /* WarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningViewController.swift; sourceTree = "<group>"; };
-		2001976221F3288100322E56 /* warning.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = warning.gif; sourceTree = "<group>"; };
+		20078AC721F5965200DD4490 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 		200EC17B21F18A1700FF0D86 /* AtomInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomInfo.swift; sourceTree = "<group>"; };
 		200EC17D21F18BF900FF0D86 /* PTJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PTJSON.json; sourceTree = SOURCE_ROOT; };
+		201F996E21F3FFC500F728A6 /* SlideupInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideupInfo.swift; sourceTree = "<group>"; };
+		201F997021F3FFD300F728A6 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		201F997D21F474D500F728A6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		20C72BF921EE9FF2006CEFC7 /* swifty-protein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-protein.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C72BFC21EE9FF2006CEFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C72BFE21EE9FF2006CEFC7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +74,17 @@
 		20C72C1821EE9FF3006CEFC7 /* swifty-proteinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swifty-proteinUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C72C1C21EE9FF3006CEFC7 /* swifty_proteinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifty_proteinUITests.swift; sourceTree = "<group>"; };
 		20C72C1E21EE9FF3006CEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D3AC52E675966773A4845F9 /* Pods-swifty-proteinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-proteinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swifty-proteinTests/Pods-swifty-proteinTests.release.xcconfig"; sourceTree = "<group>"; };
+		4597EE5DB571EF857871D18E /* Pods-swifty-proteinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-proteinUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swifty-proteinUITests/Pods-swifty-proteinUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5875122021EEB040005417CA /* ProteinListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProteinListViewCell.swift; sourceTree = "<group>"; };
 		5875122121EEB040005417CA /* ProteinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProteinViewController.swift; sourceTree = "<group>"; };
 		5875122421EEB08A005417CA /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
+		5AF512E1F2445EBA0852081C /* Pods_swifty_proteinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_proteinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C122E799D163315125744B3 /* Pods-swifty-proteinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-proteinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swifty-proteinUITests/Pods-swifty-proteinUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A778F9529D992389D40FB0AC /* Pods_swifty_proteinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_proteinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D72ECAC4B5885E37493984 /* Pods-swifty-proteinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-proteinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swifty-proteinTests/Pods-swifty-proteinTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7AA32424ED3760B647257F7 /* Pods-swifty-protein.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-protein.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swifty-protein/Pods-swifty-protein.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E7099BAC1389E81B68D620 /* Pods-swifty-protein.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-protein.release.xcconfig"; path = "Pods/Target Support Files/Pods-swifty-protein/Pods-swifty-protein.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF51CCE5DAD2482041EB07E /* Pods_swifty_protein.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3712E3A54269BEE33D6E815 /* Pods_swifty_proteinTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C388D567BB6F7F3A39894D45 /* Pods_swifty_proteinUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +143,25 @@
 			path = SCN;
 			sourceTree = "<group>";
 		};
+		201F997221F4023600F728A6 /* SlideUpTool */ = {
+			isa = PBXGroup;
+			children = (
+				200EC17B21F18A1700FF0D86 /* AtomInfo.swift */,
+				201F996E21F3FFC500F728A6 /* SlideupInfo.swift */,
+				201F997021F3FFD300F728A6 /* InfoCell.swift */,
+			);
+			path = SlideUpTool;
+			sourceTree = "<group>";
+		};
+		201F997321F4025700F728A6 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				201F997221F4023600F728A6 /* SlideUpTool */,
+				2001975C21F3117100322E56 /* ActivityIndicator.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		20C72BF021EE9FF2006CEFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +169,8 @@
 				20C72C1021EE9FF3006CEFC7 /* swifty-proteinTests */,
 				20C72C1B21EE9FF3006CEFC7 /* swifty-proteinUITests */,
 				20C72BFA21EE9FF2006CEFC7 /* Products */,
+				8FD2F1AD6C8721826D57D05D /* Pods */,
+				CB14B38EBA0348B6EDABB98D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,19 +187,18 @@
 		20C72BFB21EE9FF2006CEFC7 /* swifty-protein */ = {
 			isa = PBXGroup;
 			children = (
-				2001976221F3288100322E56 /* warning.gif */,
 				5875122421EEB08A005417CA /* ligands.txt */,
+				20C72BFC21EE9FF2006CEFC7 /* AppDelegate.swift */,
 				2001975B21F30E7500322E56 /* SCN */,
 				2001975A21F30E4300322E56 /* ViewController */,
 				200193D421EEE63100C8C577 /* Views */,
-				2001975621F2FAF000322E56 /* CustomLoader.swift */,
-				20C72BFC21EE9FF2006CEFC7 /* AppDelegate.swift */,
-				2001975C21F3117100322E56 /* ActivityIndicator.swift */,
+				201F997321F4025700F728A6 /* Tool */,
 				5875122021EEB040005417CA /* ProteinListViewCell.swift */,
-				200EC17B21F18A1700FF0D86 /* AtomInfo.swift */,
 				20C72C0321EE9FF3006CEFC7 /* Assets.xcassets */,
 				20C72C0821EE9FF3006CEFC7 /* Info.plist */,
 				200EC17D21F18BF900FF0D86 /* PTJSON.json */,
+				20078AC721F5965200DD4490 /* Launch.png */,
+				201F997D21F474D500F728A6 /* data.json */,
 			);
 			path = "swifty-protein";
 			sourceTree = "<group>";
@@ -182,6 +221,29 @@
 			path = "swifty-proteinUITests";
 			sourceTree = "<group>";
 		};
+		8FD2F1AD6C8721826D57D05D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7AA32424ED3760B647257F7 /* Pods-swifty-protein.debug.xcconfig */,
+				E3E7099BAC1389E81B68D620 /* Pods-swifty-protein.release.xcconfig */,
+				B9D72ECAC4B5885E37493984 /* Pods-swifty-proteinTests.debug.xcconfig */,
+				3D3AC52E675966773A4845F9 /* Pods-swifty-proteinTests.release.xcconfig */,
+				9C122E799D163315125744B3 /* Pods-swifty-proteinUITests.debug.xcconfig */,
+				4597EE5DB571EF857871D18E /* Pods-swifty-proteinUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB14B38EBA0348B6EDABB98D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C80CA317AC75B123AEFBBE /* Pods_swifty_protein.framework */,
+				A778F9529D992389D40FB0AC /* Pods_swifty_proteinTests.framework */,
+				5AF512E1F2445EBA0852081C /* Pods_swifty_proteinUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C72C2121EE9FF3006CEFC7 /* Build configuration list for PBXNativeTarget "swifty-protein" */;
 			buildPhases = (
+				2F66869FB0DAF9EC88B5261D /* [CP] Check Pods Manifest.lock */,
 				20C72BF521EE9FF2006CEFC7 /* Sources */,
 				20C72BF621EE9FF2006CEFC7 /* Frameworks */,
 				20C72BF721EE9FF2006CEFC7 /* Resources */,
+				A2F1971F25303D3D4B36A071 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C72C2421EE9FF3006CEFC7 /* Build configuration list for PBXNativeTarget "swifty-proteinTests" */;
 			buildPhases = (
+				B4EF0CD61D1F07563E761F37 /* [CP] Check Pods Manifest.lock */,
 				20C72C0921EE9FF3006CEFC7 /* Sources */,
 				20C72C0A21EE9FF3006CEFC7 /* Frameworks */,
 				20C72C0B21EE9FF3006CEFC7 /* Resources */,
@@ -224,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C72C2721EE9FF3006CEFC7 /* Build configuration list for PBXNativeTarget "swifty-proteinUITests" */;
 			buildPhases = (
+				BDB35320BFCFDD30A02183B7 /* [CP] Check Pods Manifest.lock */,
 				20C72C1421EE9FF3006CEFC7 /* Sources */,
 				20C72C1521EE9FF3006CEFC7 /* Frameworks */,
 				20C72C1621EE9FF3006CEFC7 /* Resources */,
@@ -287,9 +353,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C72C0721EE9FF3006CEFC7 /* LaunchScreen.storyboard in Resources */,
+				201F997E21F474D500F728A6 /* data.json in Resources */,
+				20078AC821F5965200DD4490 /* Launch.png in Resources */,
 				20C72C0421EE9FF3006CEFC7 /* Assets.xcassets in Resources */,
 				20C72C0221EE9FF2006CEFC7 /* Main.storyboard in Resources */,
-				2001976321F3288100322E56 /* warning.gif in Resources */,
 				200EC17E21F18BF900FF0D86 /* PTJSON.json in Resources */,
 				5875122521EEB08A005417CA /* ligands.txt in Resources */,
 			);
@@ -311,15 +378,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F66869FB0DAF9EC88B5261D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifty-protein-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F1971F25303D3D4B36A071 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swifty-protein/Pods-swifty-protein-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swifty-protein/Pods-swifty-protein-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4EF0CD61D1F07563E761F37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifty-proteinTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDB35320BFCFDD30A02183B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifty-proteinUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20C72BF521EE9FF2006CEFC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				200193D321EECFC200C8C577 /* ProteinSCN.swift in Sources */,
-				2001975721F2FAF000322E56 /* CustomLoader.swift in Sources */,
+				201F996F21F3FFC500F728A6 /* SlideupInfo.swift in Sources */,
 				5875122221EEB041005417CA /* ProteinListViewCell.swift in Sources */,
 				20C72BFF21EE9FF2006CEFC7 /* LoginViewController.swift in Sources */,
+				201F997121F3FFD400F728A6 /* InfoCell.swift in Sources */,
 				5875122321EEB041005417CA /* ProteinViewController.swift in Sources */,
 				2001975D21F3117100322E56 /* ActivityIndicator.swift in Sources */,
 				20C72BFD21EE9FF2006CEFC7 /* AppDelegate.swift in Sources */,
@@ -498,6 +659,7 @@
 		};
 		20C72C2221EE9FF3006CEFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7AA32424ED3760B647257F7 /* Pods-swifty-protein.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +677,7 @@
 		};
 		20C72C2321EE9FF3006CEFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E7099BAC1389E81B68D620 /* Pods-swifty-protein.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +695,7 @@
 		};
 		20C72C2521EE9FF3006CEFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9D72ECAC4B5885E37493984 /* Pods-swifty-proteinTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +716,7 @@
 		};
 		20C72C2621EE9FF3006CEFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D3AC52E675966773A4845F9 /* Pods-swifty-proteinTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -572,6 +737,7 @@
 		};
 		20C72C2821EE9FF3006CEFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C122E799D163315125744B3 /* Pods-swifty-proteinUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -591,6 +757,7 @@
 		};
 		20C72C2921EE9FF3006CEFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4597EE5DB571EF857871D18E /* Pods-swifty-proteinUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

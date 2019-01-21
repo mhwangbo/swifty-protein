@@ -47,5 +47,7 @@
 	<string>To be able to save image</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string></string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

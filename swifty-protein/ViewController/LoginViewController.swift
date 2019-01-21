@@ -8,6 +8,8 @@
 
 import UIKit
 import LocalAuthentication
+import LBTAComponents
+import RevealingSplashView
 
 class LoginViewController: UIViewController { 
 
@@ -17,8 +19,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginB: UIButton!
     var successID : Bool = false
     
+    let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "Launch")!, iconInitialSize: CGSize(width:123, height: 123), backgroundColor: UIColor(r: 177, g: 215, b: 242))
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //animation Launch Screen
+        setupView()
 
         loginB.layer.cornerRadius = 5
         touchIDB.layer.cornerRadius = 5
@@ -36,6 +43,14 @@ class LoginViewController: UIViewController {
         else {
             self.touchIDB.isHidden = true
         }
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    func setupView() {
+        // animation Type : [rotateOut, popAndZoomOut, squeezeAndZoomOut, swingAndZoomOut, woobleAndZoomOut
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        view.addSubview(revealingSplashView)
+        revealingSplashView.animationType = .popAndZoomOut
+        revealingSplashView.startAnimation()
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
@@ -77,7 +92,4 @@ class LoginViewController: UIViewController {
             })
         }
     }
-
-
 }
-
